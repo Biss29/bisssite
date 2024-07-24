@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมสุ่มตัวเลข 6 หลัก</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .number {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="number" id="randomNumber">กดปุ่มเพื่อสุ่มตัวเลข</div>
+        <button class="btn" onclick="generateRandomNumber()">สุ่มตัวเลข</button>
+    </div>
+
+    <script>
+        function generateRandomNumber() {
+            const randomNumber = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('randomNumber').innerText = randomNumber;
+        }
+    </script>
+</body>
+</html>
